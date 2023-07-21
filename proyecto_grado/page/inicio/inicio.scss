@@ -1,0 +1,115 @@
+body {
+  padding-top: 60px;
+  background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffff 50%, #f4ecef 100%);
+}
+
+/*estilos de la barra de inicio*/
+.navbar {
+  background: rgb(255,192,140);
+  background: radial-gradient(circle, rgba(255,192,140,1) 1%, rgba(255,138,22,1) 100%);
+}
+
+.active{
+  background-color: #ffd5b1;
+  border-radius: 20px;
+}
+
+.navbar .active {
+  pointer-events: none;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0480f0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #000;
+}
+
+
+/* Estilos de los contenedores de informacion */
+.container_body {
+  margin-top: 30px;
+  margin-left: 3%;
+  width: 94%;
+}
+
+.sales-container {
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,0.43461134453781514) 0%, rgba(253,187,45,0.4374124649859944) 100%);
+  border: 2px solid #ddd;
+  padding: 10px; /* Ajusta el tamaño del relleno según sea necesario */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sales-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-title {
+  color: #333;
+  font-size: 14px; /* Ajusta el tamaño de fuente según sea necesario */
+  margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+  animation: fadeIn 0.5s ease;
+}
+
+.product-name {
+  color: #666;
+  font-size: 12px; /* Ajusta el tamaño de fuente según sea necesario */
+  animation: slideInLeft 0.5s ease;
+}
+
+/* estilos de las tablas */
+.table thead{
+  background-color: #ffead8;
+  color: #000;
+}
+
+.table th {
+  background: rgb(230, 126, 34);
+  background: linear-gradient(40deg, rgb(230,126,34,0.07055322128851538));
+
+}
+
+.table td{
+  background-color: #ffead8;
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
